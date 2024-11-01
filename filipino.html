@@ -8,75 +8,65 @@
     <title>My 1st Grading Period: Knowledge in Action</title>
     <style>
 
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            color: white;
-            background-color: transparent;
-            width: 100%;
+        .story-container {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack articles vertically */
+            margin: 0 auto; /* Center the container */
+            max-width: 90%; /* Limit the width of the container */
         }
 
-        .welcome-text {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.5rem;
+        .video-article {
+            display: flex; /* Use flexbox for the article layout */
+            align-items: center; /* Center align items vertically */
+            background-color: transparent; /* Transparent background */
+            color: white; /* Text color */
+            margin: 20px; /* Space between articles */
+            padding: 10px; /* Padding inside the article */
         }
 
-        .bottom-content {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 1200px;
+        .subject-name {
+            font-size: 3.3rem; /* Font size for headings */
+            margin-right: 30px; /* Space between heading and iframe */
         }
 
-        .featured-content, .anthem-section {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
+        .iframe-container {
+            width: 900px; /* Fixed width for larger screens */
+            height: 500px; /* Fixed height for larger screens */
+            border-radius: 15px; /* Add rounded corners */
+            overflow: hidden; /* Hide overflow from rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
         }
 
-        .featured-content h2, .anthem-section h2 {
-            font-size: 2.5rem;
+        .iframe-container iframe {
+            width: 100%; /* Full width of the container */
+            height: 100%; /* Full height of the container */
+            border: none; /* Remove default iframe border */
+            border-radius: 15px; /* Match iframe corners with container */
         }
 
-        .other-webpages {
-            text-align: center;
-            margin: 20px 0;
-        }
 
-        .other-webpages h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
+        @media (max-width: 768px) {
+            .video-article {
+                flex-direction: column; /* Stack h2 and iframe on smaller screens */
+                align-items: flex-start; /* Align to the start */
+            }
 
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-        }
+            .subject-name {
+                font-size: 2rem; /* Smaller font size on small screens */
+                margin-right: 0; /* Remove right margin when stacked */
+                margin-bottom: 10px; /* Space below heading when stacked */
+            }
 
-        .button {
-            background-color: white;
-            color: black;
-            padding: 8px 15px;
-            margin: 5px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            max-width: 150px;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
+            .iframe-container {
+                width: 100%; /* Full width on smaller screens */
+                height: auto; /* Adjust height automatically */
+                max-width: 100%; /* Allow full width on small screens */
+            }
 
-        .button:hover {
-            background-color: #e0e0e0;
-            color: #333; /* Change text color on hover */
+            .iframe-container iframe {
+                height: auto; /* Adjust iframe height */
+                aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+            }
         }
 
     </style>
@@ -112,27 +102,24 @@
 
         <!-- main content -->
         <section class="main-content">
-            <div class="welcome-text">Welcome to our website! Please check out our different webpages and learn something new today!</div>
-            <div class="bottom-content">
-                <div class="featured-content">
-                    <h2>Featured Content</h2>
-                    <div class="other-webpages">
-                        <h3>Other Webpages:</h3>
-                        <div class="button-container">
-                            <a href="about-us.html" class="button">About Us</a>
-                            <a href="english.html" class="button">English</a>
-                            <a href="ap.html" class="button">AP</a>
-                            <a href="filipino.html" class="button">Filipino</a>
-                            <a href="science.html" class="button">Science</a>
-                        </div>
+            <div class="story-container">
+                <article class="video-article">
+                    <h2 class="subject-name">Speaking Task of Gabby</h2>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/n-_wSG9bovs?si=P4Ayn81qaDQ2552s" frameborder="0" allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="anthem-section">
-                    <h2>Our School Anthem</h2>
-                    <img src="Image/mockup2-removebg.png" alt="School Anthem" class="anthem-image">
-                </div>
+                </article>
+                
+                <article class="video-article">
+                    <h2 class="subject-name">Speaking Task of Miguel</h2>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/xvwdPGtZ7rY?si=6-97eMx9gQ3_uDgP" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </article>
             </div>
         </section>
+        
+        
 
         <!-- footer -->
         <footer class="site-footer">
@@ -155,6 +142,7 @@
                 <p>Once again, thank you for visiting our website!</p>
             </div>
         </footer>
+        
     </main>
 
     <script>
@@ -167,7 +155,7 @@
         });
 
         let i = 0;
-        let txt = 'Home';
+        let txt = 'Filipino';
         let speed = 300;
 
         function typeWriter() {
