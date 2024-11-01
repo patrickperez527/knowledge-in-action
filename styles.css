@@ -7,7 +7,7 @@
 body {
     font-family: "Courier Prime", monospace;
     height: 100vh;
-    background: url('Image/header.png') no-repeat center center fixed;
+    background: url('Image/Header.png') no-repeat center center fixed;
     background-size: cover;
 }
 
