@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier Prime", monospace; /* Updated font family */
+    height: 100vh;
+    background: url('Image/header.png') no-repeat center center fixed; /* Updated path */
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size for navbar links */
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+    height: calc(100vh - 60px); /* Adjust for fixed header height */
+    padding: 0 20px; /* Add padding on sides */
+    color: white;
+}
+
+.left, .right {
+    flex: 1; /* Each takes equal space */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.left {
+    text-align: center; /* Center text in the left column */
+}
+
+.left h1 {
+    font-size: 5.5rem; /* Larger font size for Home */
+}
+
+.image {
+    max-width: 100%; /* Full width */
+    max-height: 300px; /* Maximum height for image */
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-end; /* Align items to the right on small screens */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu */
+        margin-left: auto; /* Align it to the right */
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        flex-direction: column;
+        align-items: center; /* Center align items in the dropdown */
+        display: none; /* Initially hidden */
+        max-height: 0; /* Prevents showing the menu */
+        overflow: hidden; /* Prevent overflow */
+        transition: max-height 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .nav-list.active {
+        display: flex; /* Show the dropdown when active */
+        max-height: 300px; /* Set a max height when active */
+    }
+
+    .nav-list li {
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+
+    .content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: calc(100vh - 60px); /* Ensure it takes the height minus the header */
+        padding: 20px; /* Add padding for mobile */
+        align-items: center; /* Center items in the column */
+    }
+
+    .left {
+        margin-top: auto; /* Push the text to the bottom */
+        text-align: center; /* Center text */
+        position: relative; /* Allow overlapping */
+        z-index: 1; /* Bring it above the image */
+    }
+
+    .left h1 {
+        font-size: 4rem; /* Adjust for smaller screens */
+        margin-bottom: -40px; /* Bring closer to the image */
+    }
+
+    .right {
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+        margin-top: -10%; /* Adjust margin to move it up */
+        position: relative; /* Allow overlapping */
+        transform: translateY(-20%); /* Move the image up by 20% */
+    }
+
+    .image {
+        margin-top: 0; /* Remove margin above the image */
+        max-width: 90%; /* Limit width for smaller screens */
+    }
+}
