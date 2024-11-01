@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>My 1st Grading Period: Knowledge in Action</title>
+    <title>Welcome Page</title>
 </head>
 <body>
     <header>
@@ -29,19 +29,26 @@
     <main>
         <div class="content">
             <div class="left">
-                <h1>Home</h1>
+                <h1 id="demo"></h1>
             </div>
             <div class="right">
-                <img src="Image\moon.png" alt="Moon" class="image">
+                <img src="Image/moon.png" alt="Moon" class="image">
             </div>
         </div>
+        
+        <footer class="footer-content">
+            <div class="welcome-text">Welcome to our website! Please check out our different webpages and learn something new today!</div>
+            <div class="footer-bottom">
+                <div class="footer-featured">Featured Content</div>
+                <div class="footer-anthem">Our School Anthem</div>
+            </div>
+        </footer>
+        
     </main>
-    
-    
     
 </body>
 <script>
-    
+    // for navigation buttons
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.querySelector('.nav-list');
 
@@ -49,5 +56,21 @@
         navList.classList.toggle('active');
     });
 
+    let i = 0; // use let instead of var
+    let txt = 'Home'; // use let instead of var
+    let speed = 300; // use let instead of var
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed); 
+        } else {
+        i = 0;
+            document.getElementById("demo").innerHTML = '';
+        }
+    }
+
+    setInterval(typeWriter, 2000)
 </script>
 </html>
