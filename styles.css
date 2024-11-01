@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: "Courier Prime", monospace; /* Updated font family */
+    font-family: "Courier Prime", monospace;
     height: 100vh;
-    background: url('Image/header.png') no-repeat center center fixed; /* Updated path */
+    background: url('Image/header.png') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -41,11 +41,11 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem; /* Increased font size for navbar links */
+    font-size: 1.4rem;
 }
 
 .menu-toggle {
-    display: none; /* Hide by default */
+    display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
 }
@@ -59,36 +59,78 @@ nav {
 
 .content {
     display: flex;
-    justify-content: space-between; /* Space between text and image */
-    align-items: center; /* Center items vertically */
-    height: calc(100vh - 60px); /* Adjust for fixed header height */
-    padding: 0 20px; /* Add padding on sides */
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 60px);
+    padding: 0 20px;
     color: white;
 }
 
 .left, .right {
-    flex: 1; /* Each takes equal space */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .left {
-    text-align: center; /* Center text in the left column */
+    text-align: center;
 }
 
 .left h1 {
-    font-size: 5.5rem; /* Larger font size for Home */
+    font-size: 6rem;
 }
 
 .image {
-    max-width: 100%; /* Full width */
-    max-height: 300px; /* Maximum height for image */
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center; /* Center items in the footer */
+    width: 100%;
+    flex-direction: row; /* Ensure they are in a row */
+}
+
+.footer-featured, .footer-anthem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-featured {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.footer-anthem {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
     nav {
-        justify-content: flex-end; /* Align items to the right on small screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
 
     .menu-toggle {
@@ -103,11 +145,11 @@ nav {
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         flex-direction: column;
-        align-items: center; /* Center align items in the dropdown */
+        align-items: center;
         display: none; /* Initially hidden */
         max-height: 0; /* Prevents showing the menu */
-        overflow: hidden; /* Prevent overflow */
-        transition: max-height 0.3s ease-in-out; /* Smooth transition */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
     .nav-list.active {
@@ -121,34 +163,53 @@ nav {
 
     .content {
         flex-direction: column; /* Stack items vertically on smaller screens */
-        height: calc(100vh - 60px); /* Ensure it takes the height minus the header */
-        padding: 20px; /* Add padding for mobile */
-        align-items: center; /* Center items in the column */
+        height: calc(100vh - 60px);
+        padding: 20px;
+        align-items: center; /* Center items */
     }
 
     .left {
-        margin-top: auto; /* Push the text to the bottom */
-        text-align: center; /* Center text */
-        position: relative; /* Allow overlapping */
-        z-index: 1; /* Bring it above the image */
+        margin-top: auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
     }
 
     .left h1 {
-        font-size: 4rem; /* Adjust for smaller screens */
-        margin-bottom: -40px; /* Bring closer to the image */
+        font-size: 4rem;
+        margin-bottom: -40px;
     }
 
     .right {
         display: flex;
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center the image vertically */
-        margin-top: -10%; /* Adjust margin to move it up */
-        position: relative; /* Allow overlapping */
-        transform: translateY(-20%); /* Move the image up by 20% */
+        justify-content: center;
+        align-items: center;
+        margin-top: -10%;
+        position: relative;
+        transform: translateY(-20%);
     }
 
     .image {
         margin-top: 0; /* Remove margin above the image */
         max-width: 90%; /* Limit width for smaller screens */
+    }
+
+    /* Adjust footer layout for small screens */
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        width: 100%; /* Ensure full width */
+    }
+
+    .footer-featured, .footer-anthem {
+        flex: none; /* Disable flex grow/shrink */
+        font-size: 2rem; /* Adjust font size */
+        margin-top: 10px; /* Add spacing */
+        text-align: center; /* Center text */
     }
 }
