@@ -6,8 +6,7 @@
 
 body {
     font-family: "Courier Prime", monospace;
-    height: 100vh;
-    background: url('Image/Header.png') no-repeat center center fixed;
+    background: url('Image/header.png') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -41,7 +40,7 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Increased font size for navbar */
     transition: color 0.3s;
 }
 
@@ -64,11 +63,12 @@ nav {
 
 .content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; /* Horizontal layout on larger screens */
+    justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px);
-    padding: 0 20px;
+    min-height: 100vh; /* Minimum height of the viewport */
     color: white;
+    padding-top: 60px; /* Space for fixed header */
 }
 
 .left, .right {
@@ -98,6 +98,7 @@ nav {
     padding: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
+    width: 100%; /* Full width for footer */
 }
 
 .welcome-text {
@@ -122,12 +123,12 @@ nav {
 }
 
 .footer-featured h2, .footer-anthem h2 {
-    font-size: 3rem; /* Increased font size for both sections */
+    font-size: 3rem;
 }
 
 .other-webpages {
     text-align: center;
-    margin: 20px 0; /* Added margin above and below */
+    margin: 20px 0;
 }
 
 .other-webpages h3 {
@@ -137,15 +138,15 @@ nav {
 
 .button-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* Allow buttons to wrap onto the next line */
+    justify-content: center; /* Center buttons horizontally */
 }
 
 .button {
     background-color: white;
     color: black;
     padding: 8px 15px;
-    margin: 5px 0;
+    margin: 5px; /* Space between buttons */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -193,10 +194,9 @@ nav {
     }
 
     .content {
-        flex-direction: column;
-        height: calc(100vh - 60px);
+        flex-direction: column; /* Stack content vertically on small screens */
+        min-height: 100vh; /* Minimum height for scrolling */
         padding: 20px;
-        align-items: center;
     }
 
     .left {
@@ -214,6 +214,7 @@ nav {
         justify-content: center;
         align-items: center;
         margin-top: -10%;
+        width: 100%; /* Full width for image */
     }
 
     .image {
@@ -224,10 +225,11 @@ nav {
     .footer-content {
         flex-direction: column;
         align-items: center;
+        margin-top: 20px; /* Space between content and footer */
     }
 
     .footer-bottom {
-        flex-direction: column;
+        flex-direction: column; /* Stack footer items on small screens */
         align-items: center;
         width: 100%;
     }
@@ -238,5 +240,15 @@ nav {
         flex-direction: column;
         align-items: center;
         margin: 20px;
+    }
+
+    .button-container {
+        justify-content: center; /* Center buttons in the container */
+        width: 100%; /* Full width for the button container */
+    }
+
+    .button {
+        flex: 1 1 45%; /* Allow buttons to be responsive */
+        max-width: 150px; /* Limit button width */
     }
 }
