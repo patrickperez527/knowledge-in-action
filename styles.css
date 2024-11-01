@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     background-size: cover;
 }
 
+/* Header Styles */
 header {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -40,7 +42,7 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5rem; /* Increased font size for navbar */
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
 
@@ -61,14 +63,15 @@ nav {
     margin: 3px 0;
 }
 
+/* Main Content Styles */
 .content {
     display: flex;
-    flex-direction: row; /* Horizontal layout on larger screens */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Minimum height of the viewport */
+    min-height: 100vh;
     color: white;
-    padding-top: 60px; /* Space for fixed header */
+    padding-top: 60px;
 }
 
 .left, .right {
@@ -91,14 +94,14 @@ nav {
     max-height: 300px;
 }
 
-.footer-content {
+.main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 100%; /* Full width for footer */
+    width: 100%;
 }
 
 .welcome-text {
@@ -107,14 +110,14 @@ nav {
     font-size: 2.5rem;
 }
 
-.footer-bottom {
+.bottom-content {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
 }
 
-.footer-featured, .footer-anthem {
+.featured-content, .anthem-section {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -122,8 +125,8 @@ nav {
     margin: 20px;
 }
 
-.footer-featured h2, .footer-anthem h2 {
-    font-size: 3rem;
+.featured-content h2, .anthem-section h2 {
+    font-size: 2.5rem;
 }
 
 .other-webpages {
@@ -132,33 +135,101 @@ nav {
 }
 
 .other-webpages h3 {
-    font-size: 2.5rem; /* Adjusted font size for smaller heading */
-    margin-bottom: 15px; /* Added margin at the bottom for spacing */
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .button-container {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap onto the next line */
-    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .button {
     background-color: white;
     color: black;
     padding: 8px 15px;
-    margin: 5px; /* Space between buttons */
+    margin: 5px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: auto;
     max-width: 150px;
     text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .button:hover {
     background-color: #e0e0e0;
+    color: #333; /* Change text color on hover */
 }
 
+/* Anthem Image Styles */
+.anthem-image {
+    max-width: 40%; /* Default size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make it a block element */
+    margin: 20px auto; /* Center the image with margin */
+}
+
+@media (max-width: 768px) {
+    .anthem-image {
+        max-width: 80%; /* Increase size for smaller screens */
+    }
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-top: 1px solid white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1; /* Allow columns to grow equally */
+    text-align: center; /* Center text for all footer columns */
+    margin: 0 20px; /* Space between columns */
+}
+
+/* Keeping the footer details text format the same */
+.footer-column a {
+    color: inherit; /* Keep the text color same as surrounding text */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-column a:hover {
+    color: #e0e0e0; /* Change color on hover for feedback */
+    text-decoration: underline; /* Optional: add underline on hover for visual feedback */
+}
+
+.footer-column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footer-message {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -195,7 +266,7 @@ nav {
 
     .content {
         flex-direction: column; /* Stack content vertically on small screens */
-        min-height: 100vh; /* Minimum height for scrolling */
+        min-height: 100vh;
         padding: 20px;
     }
 
@@ -214,7 +285,7 @@ nav {
         justify-content: center;
         align-items: center;
         margin-top: -10%;
-        width: 100%; /* Full width for image */
+        width: 100%;
     }
 
     .image {
@@ -222,19 +293,19 @@ nav {
         max-width: 90%;
     }
 
-    .footer-content {
+    .main-content {
         flex-direction: column;
         align-items: center;
-        margin-top: 20px; /* Space between content and footer */
+        margin-top: 20px;
     }
 
-    .footer-bottom {
-        flex-direction: column; /* Stack footer items on small screens */
+    .bottom-content {
+        flex-direction: column; /* Stack bottom content on small screens */
         align-items: center;
         width: 100%;
     }
 
-    .footer-featured, .footer-anthem {
+    .featured-content, .anthem-section {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -244,7 +315,7 @@ nav {
 
     .button-container {
         justify-content: center; /* Center buttons in the container */
-        width: 100%; /* Full width for the button container */
+        width: 100%;
     }
 
     .button {
