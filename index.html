@@ -25,7 +25,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <div class="content">
             <div class="left">
@@ -35,42 +35,57 @@
                 <img src="Image/moon.png" alt="Moon" class="image">
             </div>
         </div>
-        
+
         <footer class="footer-content">
             <div class="welcome-text">Welcome to our website! Please check out our different webpages and learn something new today!</div>
             <div class="footer-bottom">
-                <div class="footer-featured">Featured Content</div>
-                <div class="footer-anthem">Our School Anthem</div>
+                <div class="footer-featured">
+                    <h2>Featured Content</h2>
+                    <div class="other-webpages">
+                        <h3>Other Webpages:</h3>
+                        <div class="button-container">
+                            <a href="#" class="button">About Us</a>
+                            <a href="#" class="button">English</a>
+                            <a href="#" class="button">AP</a>
+                            <a href="#" class="button">Filipino</a>
+                            <a href="#" class="button">Science</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-anthem">
+                    <h2>Our School Anthem</h2>
+                    <!-- Add content for the anthem here -->
+                </div>
             </div>
         </footer>
         
     </main>
-    
-</body>
-<script>
-    // for navigation buttons
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.querySelector('.nav-list');
 
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
+    <script>
+        // for navigation buttons
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
 
-    let i = 0; // use let instead of var
-    let txt = 'Home'; // use let instead of var
-    let speed = 300; // use let instead of var
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
 
-    function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("demo").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed); 
-        } else {
-        i = 0;
-            document.getElementById("demo").innerHTML = '';
+        let i = 0;
+        let txt = 'Home';
+        let speed = 300;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed); 
+            } else {
+                i = 0;
+                document.getElementById("demo").innerHTML = '';
+            }
         }
-    }
 
-    setInterval(typeWriter, 2000)
-</script>
+        setInterval(typeWriter, 2000);
+    </script>
+</body>
 </html>
