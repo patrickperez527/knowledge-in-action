@@ -6,6 +6,101 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>My 1st Grading Period: Knowledge in Action</title>
+    <style>
+       .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: #171718;
+}
+
+.introduction {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.introduction .title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.introduction h3,
+.background-study h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    text-align: justify; /* Justify the paragraphs */
+    font-size: 1.2rem;
+    text-indent: 1.5em; /* Standard indent size */
+}
+
+.introduction p,
+.study-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Space between paragraphs */
+    text-indent: 1.5em; /* Standard indent size */
+}
+
+.background-study {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.study-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.study-text {
+    flex: 1;
+    max-width: 1000px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+.study-image {
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    max-width: 250px; /* Default max width for larger screens */
+}
+
+/* Media query for medium screens */
+@media (max-width: 1024px) {
+    .study-image {
+        max-width: 200px; /* Smaller max width for medium screens */
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .study-image {
+        max-width: 150px; /* Even smaller max width for small screens */
+    }
+
+    .study-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .study-text {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .study-image {
+        max-width: 100%; /* Full width for very small screens */
+    }
+}
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -37,8 +132,49 @@
         </div>
 
         <!-- main content -->
+        <section class="main-content">
+            <div class="introduction">
+                <h2 class="title">A Comparative Study on the Mass Reduction of Polystyrene and Polyethylene by Superworms (Zophobas morio) Over a 60-Day Period</h2>
+                <h3>Introduction</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic culpa architecto similique nemo dignissimos quibusdam, esse iste quam aperiam accusamus neque vel voluptatum sequi aliquid ullam, dolores incidunt cum alias rem. Consequatur illo mollitia qui. Sequi cumque voluptatibus quae, nobis, quam possimus consequuntur non accusamus esse suscipit perferendis velit rem architecto libero nihil veritatis. Magnam repudiandae aspernatur sed dolor quaerat unde voluptates officia adipisci deserunt ex accusantium totam aut enim dicta, eligendi tempora dolorum rerum quibusdam doloribus a labore ad. Labore ullam facilis vitae accusamus praesentium, iste magnam beatae natus ratione at fugit officia omnis, odit sequi nulla ipsa expedita.</p>
+            </div>
         
-
+            <div class="background-study">
+                <h3>Background of the Study</h3>
+        
+                <div class="study-item">
+                    <div class="study-text">
+                        <p>
+                            Plastic pollution has become a global environmental and economic challenge, driven by the widespread use of single-use plastic products. In everyday life, individuals consume items like soda in plastic bags, chocolate bars wrapped in plastic, or food served on styrofoam plates. These materials, particularly polystyrene and polyethylene, are persistent pollutants that are difficult to recycle, especially in countries with limited disposal methods. 
+                            Among these materials, polystyrene poses a significant problem, taking up to 500 years or more to degrade and contributing to landfill waste (Kelly, 2023; Davis, 2019). 
+                            Efforts to mitigate this waste have included chemical methods, but researchers are increasingly exploring biological alternatives.
+                        </p>
+                        <p>
+                            Among these materials, polystyrene, commonly known as styrofoam, poses a significant problem. Studies suggest that polystyrene can take up to 500 years or more to degrade, contributing to the long-term accumulation of waste in landfills (Kelly, 2023; Davis, 2019). Although styrofoam is lightweight, it occupies considerable space due to its low density—approximately 31% the density of cork—and makes up as much as 30% of some landfills (Davis, 2019). Worse, much of this plastic waste ends up polluting natural environments such as rivers, forests, and fields, further exacerbating environmental degradation.
+                        </p>
+                        <p>
+                            Efforts to mitigate polystyrene waste have included chemical methods like using acetone to dissolve and compact the material. However, acetone is highly flammable and poses significant environmental and safety risks, making it an unsuitable solution for widespread use (Helmenstine, 2019 ; Spangler, 2024). This has led researchers to explore biological alternatives for plastic degradation, with a particular focus on organisms capable of consuming plastic materials.
+                        </p>
+                    </div>
+                    <img src="Image/Science1-removebg.png" alt="Background Study Image 1" class="study-image">
+                </div>
+        
+                <div class="study-item">
+                    <div class="study-text">
+                        <p>One promising solution involves the use of superworms (Zophobas morio), which have demonstrated an ability to consume polystyrene and low-density polyethylene (LDPE). However, previous studies have been limited in scope, focusing primarily on polystyrene.</p>
+                    </div>
+                    <img src="Image/Science5-removebg.png" alt="Background Study Image 2" class="study-image">
+                </div>
+        
+                <div class="study-item">
+                    <div class="study-text">
+                        <p>To address these gaps, this study aims to conduct a comparative analysis of the effectiveness of Zophobas morio in consuming both polystyrene and polyethylene over a 60-day period.</p>
+                    </div>
+                    <img src="Image/Science4-removebg.png" alt="Background Study Image 3" class="study-image">
+                </div>
+            </div>
+        </section>
+        
         <!-- footer -->
         <footer class="site-footer">
             <div class="footer-content">

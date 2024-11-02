@@ -24,19 +24,20 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 10px; /* Remove extra padding */
+    margin: 0; /* Remove margin */
+    background-color: #171718;
 }
 
 .nav-list {
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
 }
 
 .nav-list li {
-    margin: 0 15px;
+    margin: 0 15px; /* Maintain space between items */
 }
 
 .nav-list a {
@@ -54,7 +55,7 @@ nav {
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
 }
@@ -107,94 +108,41 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .anthem-image {
-        max-width: 80%; /* Increase size for smaller screens */
+    :root {
+        --nav-list-top: 47px; /* Define a variable for the top offset */
     }
-}
 
-/* Footer Styles */
-.site-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    border-top: 1px solid white;
-}
+    .nav-list {
+        position: absolute;
+        top: var(--nav-list-top); /* Use the variable here */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Initially hidden */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        background-color: #171718;
+    }
 
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    .nav-list.active {
+        display: flex; /* Show the menu when active */
+        max-height: 300px; /* Expand height */
+    }
 
-.footer-column {
-    flex: 1; /* Allow columns to grow equally */
-    text-align: center; /* Center text for all footer columns */
-    margin: 0 20px; /* Space between columns */
-}
-
-/* Keeping the footer details text format the same */
-.footer-column a {
-    color: inherit; /* Keep the text color same as surrounding text */
-    text-decoration: none; /* Remove underline */
-}
-
-.footer-column a:hover {
-    color: white; /* Change color on hover for feedback */
-    text-decoration: underline; /* Optional: add underline on hover for visual feedback */
-}
-
-.footer-column h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.footer-column p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.footer-message {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 20px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: center;
     }
 
     .menu-toggle {
-        display: flex;
+        display: flex; /* Show the menu toggle on small screens */
         margin-left: auto;
     }
 
-    .nav-list {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    .nav-list.active {
-        display: flex;
-        max-height: 300px;
-    }
-
     .nav-list li {
-        margin: 10px 0;
+        margin: 10px 0; /* Space between items in mobile view */
     }
 
     .content {
@@ -209,7 +157,7 @@ nav {
     }
 
     .left h1 {
-        font-size: 4rem;
+        font-size: 4rem; /* Adjusted for smaller screens */
         margin-bottom: -40px;
     }
 
@@ -255,4 +203,53 @@ nav {
         flex: 1 1 45%; /* Allow buttons to be responsive */
         max-width: 150px; /* Limit button width */
     }
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-top: 1px solid white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1; /* Allow columns to grow equally */
+    text-align: center; /* Center text for all footer columns */
+    margin: 0 20px; /* Space between columns */
+}
+
+.footer-column a {
+    color: inherit; /* Keep the text color same as surrounding text */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-column a:hover {
+    color: white; /* Change color on hover for feedback */
+    text-decoration: underline; /* Optional: add underline on hover for visual feedback */
+}
+
+.footer-column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footer-message {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
 }
