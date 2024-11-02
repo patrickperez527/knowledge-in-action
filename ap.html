@@ -6,10 +6,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>My 1st Grading Period: Knowledge in Action</title>
+    <style>
+
+    .main-content {
+        margin-top: 0;
+    }
+
+    .story-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .presentation-container {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: white;
+        margin: 20px; 
+        padding: 10px;
+    }
+
+    .subject-name {
+        font-size: 3.5rem; /* Smaller font size for the title */
+        margin-right: 30px; /* Space between title and slideshow */
+    }
+
+    .slideshow-container {
+        position: relative;
+        margin-left: auto; /* Aligns the slideshow to the right */
+        overflow: hidden;
+        max-width: 1000px; /* Increase width for larger images */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .slideshow-container img {
+        width: 100%; /* Ensure images take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .mySlides1, .mySlides2 {
+        display: none;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%; 
+        transform: translateY(-50%); 
+        padding: 16px;
+        color: black; 
+        font-weight: bold;
+        font-size: 24px; 
+        transition: color 0.3s ease; 
+        opacity: 0;
+    }
+
+    .next {
+        right: 0; 
+    }
+
+    .prev {
+        left: 0; 
+    }
+
+    .prev:hover, .next:hover {
+        color: rgba(0, 0, 0, 0.8); 
+    }
+
+    .slideshow-container:hover .prev,
+    .slideshow-container:hover .next {
+        opacity: 1; 
+    }
+
+    .slideshowIndicator1 {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 1.2rem; /* Default font size for slide numbers */
+        text-align: center;
+        margin: 0;
+        background-color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .presentation-container {
+            flex-direction: column; /* Stack title and slideshow on smaller screens */
+            align-items: flex-start; 
+        }
+
+        .subject-name {
+            font-size: 1.8rem; /* Smaller font size for mobile */
+            margin-right: 0; 
+            margin-bottom: 10px; 
+        }
+
+        .slideshow-container {
+            width: 100%; 
+            max-width: 100%; 
+        }
+
+        .slideshowIndicator1 {
+            font-size: 0.9rem; /* Smaller font size for slide numbers on small screens */
+            padding: 3px 6px; /* Adjust padding for better appearance */
+        }
+    }
+
+    </style>
 </head>
 <body>
     <header>
         <nav>
+            <!-- navbar -->
             <div class="menu-toggle" id="mobile-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -27,6 +140,7 @@
     </header>
 
     <main>
+        <!-- page intro -->
         <div class="content">
             <div class="left">
                 <h1 id="demo"></h1>
@@ -35,10 +149,181 @@
                 <img src="Image/moon.png" alt="Moon" class="image">
             </div>
         </div>
-        
-        <!-- main content -->
-        
 
+        <!-- main content -->
+        <section class="main-content" style="background-color: #171718;">
+            <div class="story-container">
+                <article class="presentation-container">
+                    <h2 class="subject-name">Market Analysis of Gabby's Group</h2>
+                    <div class="slideshow-container">
+                        <div class="mySlides1 fade">
+                            <img src="Image/1.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 1 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/2.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 2 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/3.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 3 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/4.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 4 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/5.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 5 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/6.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 6 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/7.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 7 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/8.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 8 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/9.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 9 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/10.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 10 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/11.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 11 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/12.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 12 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/13.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 13 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/14.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 14 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/15.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 15 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/16.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 16 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/17.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 17 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/18.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 18 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/19.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 19 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/20.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 20 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/21.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 21 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/22.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 22 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/23.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 23 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/24.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 24 / 25</div>
+                        </div>
+                        <div class="mySlides1 fade">
+                            <img src="Image/25.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 25 / 25</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    </div>
+                </article>
+        
+                <article class="presentation-container">
+                    <h2 class="subject-name">Market Analysis of Miguel's Group</h2>
+                    <div class="slideshow-container">
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_1.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 1 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_2.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 2 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_3.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 3 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_4.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 4 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_5.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 5 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_6.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 6 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_7.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 7 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_8.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 8 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_9.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 9 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_10.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 10 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_11.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 11 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_12.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 12 / 13</div>
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="Image/2_13.png" style="width:100%">
+                            <div class="slideshowIndicator1">Slide 13 / 13</div>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
         <!-- footer -->
         <footer class="site-footer">
             <div class="footer-content">
@@ -72,8 +357,9 @@
             navList.classList.toggle('active');
         });
 
+        // intro text
         let i = 0;
-        let txt = 'A.P';
+        let txt = 'Araling Panlipunan';
         let speed = 300;
 
         function typeWriter() {
@@ -88,6 +374,29 @@
         }
 
         setInterval(typeWriter, 2000);
+
+        // for image slideshow
+        let slideIndex = [1, 1]; // Array for tracking slide indices
+        let slideId = ["mySlides1", "mySlides2"];
+
+        // Show initial slides
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {slideIndex[no] = 1}
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex[no]-1].style.display = "block";
+        }
     </script>
 </body>
 </html>

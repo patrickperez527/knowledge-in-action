@@ -8,67 +8,68 @@
     <title>My 1st Grading Period: Knowledge in Action</title>
     <style>
         
-       .main-content {
-            padding: 40px;
-            background-color: transparent; /* Keep background transparent */
-            color: white; /* Text color */
-            text-align: center; /* Center the heading */
-            margin: 20px auto;
-            border-radius: 8px;
-            max-width: 1000px; /* Increased max width */
-            width: 90%; /* Set width to 90% for better responsiveness */
-        }
+    .main-content {
+        padding: 40px;
+        background-color: transparent; /* Keep background transparent */
+        color: white; /* Text color */
+        text-align: center; /* Center the heading */
+        margin: 20px auto;
+        border-radius: 8px;
+        max-width: 1000px; /* Increased max width */
+        width: 90%; /* Set width to 90% for better responsiveness */
+    }
 
-        .subject-name {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+    .subject-name {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
 
+    .details {
+        display: flex; /* Use flexbox for layout */
+        align-items: flex-start; /* Align items to the top */
+        justify-content: flex-start; /* Align items to the left */
+        margin: 40px 0;
+    }
+
+    .profile-image {
+        max-width: 300px; /* Increased max width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 20px; /* Space between image and text */
+    }
+
+    .details p {
+        font-size: 1.2rem;
+        margin: 0; /* Remove default margin */
+        max-width: 600px; /* Limit paragraph width */
+        text-align: justify; /* Justify the text */
+        line-height: 1.6; /* Add line height for better readability */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
         .details {
-            display: flex; /* Use flexbox for layout */
-            align-items: flex-start; /* Align items to the top */
-            justify-content: flex-start; /* Align items to the left */
-            margin-top: 40px; /* Space from the top */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
         }
 
         .profile-image {
-            max-width: 300px; /* Increased max width for the image */
-            height: auto; /* Maintain aspect ratio */
-            margin-right: 20px; /* Space between image and text */
+            margin-right: 0; /* Remove right margin on smaller screens */
+            margin-bottom: 10px; /* Space below the image */
         }
 
         .details p {
-            font-size: 1.2rem;
-            margin: 0; /* Remove default margin */
-            max-width: 600px; /* Limit paragraph width */
-            text-align: justify; /* Justify the text */
-            line-height: 1.6; /* Add line height for better readability */
+            margin-top: 10px; /* Space above the paragraph */
+            padding-left: 0; /* Remove padding on smaller screens */
         }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .details {
-                flex-direction: column; /* Stack items vertically */
-                align-items: center; /* Center items horizontally */
-                text-align: center; /* Center text */
-            }
-
-            .profile-image {
-                margin-right: 0; /* Remove right margin on smaller screens */
-                margin-bottom: 10px; /* Space below the image */
-            }
-
-            .details p {
-                margin-top: 10px; /* Space above the paragraph */
-                padding-left: 0; /* Remove padding on smaller screens */
-            }
-        }
+    }
 
     </style>
 </head>
 <body>
     <header>
         <nav>
+            <!-- navbar -->
             <div class="menu-toggle" id="mobile-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -86,6 +87,7 @@
     </header>
 
     <main>
+        <!-- page intro -->
         <div class="content">
             <div class="left">
                 <h1 id="demo"></h1>
@@ -103,8 +105,6 @@
                 <img src="Image/Gabby-removebg.png" alt="Gabby" class="profile-image">
                 <p>Hi! I am Master Quintin Gabriel P. Allado of 9-Ireland. I am a slightly above average Ateneo student and as of current, I am a member of the Ateneo Scouting Movement. I am a student that intends to serve for our community and I was inspired by the CSIP program to do so. Thank you so much for visiting our website :)))))))</p>
             </div>
-        
-            <br>
             
             <h2 class="subject-name">Angelo Miguel E. Ambulo</h2>
 
@@ -147,6 +147,7 @@
             navList.classList.toggle('active');
         });
 
+        // intro text
         let i = 0;
         let txt = 'About Us';
         let speed = 300;

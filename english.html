@@ -7,77 +7,79 @@
     <link rel="stylesheet" href="styles.css">
     <title>My 1st Grading Period: Knowledge in Action</title>
     <style>
-        .main-content {
-            padding: 40px;
-            background-color: transparent; /* Keep background transparent */
-            color: white; /* Text color */
-            border-radius: 8px;
-            max-width: 90%; /* Take 90% width of the page */
-            margin: 20px auto; /* Center the section */
-            display: flex; /* Use flexbox for layout */
-            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-            justify-content: space-between; /* Space articles evenly */
-        }
 
-        .story-container {
-            display: flex; /* Display articles side by side */
-            flex-wrap: wrap; /* Allow wrapping */
-            justify-content: space-between; /* Space articles evenly */
-            width: 100%; /* Full width of the container */
-        }
+    .main-content {
+        padding: 40px;
+        background-color: transparent; /* Keep background transparent */
+        color: white; /* Text color */
+        border-radius: 8px;
+        max-width: 90%; /* Take 90% width of the page */
+        margin: 20px auto; /* Center the section */
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        justify-content: space-between; /* Space articles evenly */
+    }
 
+    .story-container {
+        display: flex; /* Display articles side by side */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-between; /* Space articles evenly */
+        width: 100%; /* Full width of the container */
+    }
+
+    article {
+        flex: 1 1 45%; /* Allow articles to take up 45% width and grow/shrink */
+        margin: 10px; /* Add some margin between articles */
+        padding: 20px; /* Add padding for better spacing */
+        color: white; /* Text color */
+        background-color: transparent; /* Transparent background */
+    }
+
+    .main-content .subject-name {
+        font-size: 2.5rem; /* Larger font size for titles */
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    .main-content h3 {
+        font-size: 1.5rem; /* Size for the author names */
+        margin-bottom: 20px; /* Space below the author name */
+        font-style: italic; /* Italic for authors */
+    }
+
+    .main-content p {
+        font-size: 1.2rem; /* Size for the paragraphs */
+        line-height: 1.6; /* Improved readability */
+        margin-bottom: 30px; /* Space below paragraphs */
+        text-align: justify; /* Justify text for a cleaner look */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
         article {
-            flex: 1 1 45%; /* Allow articles to take up 45% width and grow/shrink */
-            margin: 10px; /* Add some margin between articles */
-            padding: 20px; /* Add padding for better spacing */
-            color: white; /* Text color */
-            background-color: transparent; /* Transparent background */
+            flex: 1 1 100%; /* Take full width on small screens */
+            margin: 10px 0; /* Reduce margin for better spacing */
         }
 
         .main-content .subject-name {
-            font-size: 2.5rem; /* Larger font size for titles */
-            margin-bottom: 10px; /* Space below the title */
+            font-size: 2rem; /* Smaller title size */
+            text-align: center;
         }
 
         .main-content h3 {
-            font-size: 1.5rem; /* Size for the author names */
-            margin-bottom: 20px; /* Space below the author name */
-            font-style: italic; /* Italic for authors */
+            font-size: 1.3rem; /* Smaller author name size */
+            text-align: center;
         }
 
         .main-content p {
-            font-size: 1.2rem; /* Size for the paragraphs */
-            line-height: 1.6; /* Improved readability */
-            margin-bottom: 30px; /* Space below paragraphs */
-            text-align: justify; /* Justify text for a cleaner look */
+            font-size: 1rem; /* Smaller paragraph size */
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            article {
-                flex: 1 1 100%; /* Take full width on small screens */
-                margin: 10px 0; /* Reduce margin for better spacing */
-            }
-
-            .main-content .subject-name {
-                font-size: 2rem; /* Smaller title size */
-                text-align: center;
-            }
-
-            .main-content h3 {
-                font-size: 1.3rem; /* Smaller author name size */
-                text-align: center;
-            }
-
-            .main-content p {
-                font-size: 1rem; /* Smaller paragraph size */
-            }
-        }
+    }
     </style>
 </head>
 <body>
     <header>
         <nav>
+            <!-- navbar -->
             <div class="menu-toggle" id="mobile-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -95,6 +97,7 @@
     </header>
 
     <main>
+        <!-- page intro -->
         <div class="content">
             <div class="left">
                 <h1 id="demo"></h1>
@@ -110,24 +113,20 @@
                 <article>
                     <h2 class="subject-name">The Shift in an Academic Mindset</h2>
                     <h3>By Quintin Gabriel P. Allado</h3>
-                    <p>
-                        Good morning classmates and Ma'am! Today, I will talk about an experience I had that changed how I treat academics now. I will talk about the time I failed my first or second quarter Science Quiz in Grade 6. <br><br>
-                        Around 3 years ago, I was a student in my last year of the Ateneo Grade School. I, finding the year before easy, naively assumed that it would be the same as before. I, maintaining my old mindset, thought that studying was useless because I barely studied the year before. Time started to fly and before I knew it, we had reached the final assessment. Instead of doing the important thing which was to study, I decided to play video games. I continued to play every single day after class until the day before the test. On test day, my brain was like a broken robot. A broken robot can't understand the code being given to it and I couldn't understand anything that was going on. My brain was a convoluted and conjumbled mess and all I could do was guess the answers. By the end of it, my Google form was a mess and my brain was completely fried. Around a week after the mess, I received my score and found out it was below half. I, feeling sad and guilty, cried and locked myself in my room.<br><br>
-                        I thought getting high grades was easy but my experience showed me the opposite. That day, I really learned a lot. First, I can't do nothing and expect high grades from it. If I really wanted to get high grades, I need to put in the effort to do so. I needed to do something and sit there playing games. Another thing I learned was that studying has a purpose and it was never useless. I need to study so I can get high grades and I can't just not study. The last thing I learned was that I needed to prioritize my needs over my wants. Academics are supposed to be the top priority for us students and all distractions should be neglected such as video games, videos etc.<br><br>
-                        As I end, I hope that you guys will prioritize your academics over all and that you put all your effort to getting high grades.<br><br>
-                        Thank you very much for listening and I hope you learned something valuable from my speech.
-                    </p>
+                    <p>Good morning classmates and Ma'am! Today, I will talk about an experience I had that changed how I treat academics now. I will talk about the time I failed my first or second quarter Science Quiz in Grade 6.</p>
+                    <p>Around 3 years ago, I was a student in my last year of the Ateneo Grade School. I, finding the year before easy, naively assumed that it would be the same as before. I, maintaining my old mindset, thought that studying was useless because I barely studied the year before. Time started to fly and before I knew it, we had reached the final assessment. Instead of doing the important thing which was to study, I decided to play video games. I continued to play every single day after class until the day before the test. On test day, my brain was like a broken robot. A broken robot can't understand the code being given to it and I couldn't understand anything that was going on. My brain was a convoluted and conjumbled mess and all I could do was guess the answers. By the end of it, my Google form was a mess and my brain was completely fried. Around a week after the mess, I received my score and found out it was below half. I, feeling sad and guilty, cried and locked myself in my room.</p>
+                    <p>I thought getting high grades was easy but my experience showed me the opposite. That day, I really learned a lot. First, I can't do nothing and expect high grades from it. If I really wanted to get high grades, I need to put in the effort to do so. I needed to do something and sit there playing games. Another thing I learned was that studying has a purpose and it was never useless. I need to study so I can get high grades and I can't just not study. The last thing I learned was that I needed to prioritize my needs over my wants. Academics are supposed to be the top priority for us students and all distractions should be neglected such as video games, videos etc.</p>
+                    <p>As I end, I hope that you guys will prioritize your academics over all and that you put all your effort to getting high grades.</p>
+                    <p>Thank you very much for listening and I hope you learned something valuable from my speech.</p>
                 </article>
                 
                 <article>
                     <h2 class="subject-name">Once a Passion, Now a Dark Reality in Disguise</h2>
                     <h3>By Angelo Miguel E. Ambulo</h3>
-                    <p>
-                        Good day to all of you. I’ve once thought to myself that being passionate about something could lead to you trying to pursue it, attempting to make it into a reality. We all have experienced this at least once in our lives. For sure, you have had instances wherein you regret the decision of pursuing a dream in life. There could have also been instances where you lost your connection/bond between those who are close to you. I have a passion in life that I tried to pursue.<br><br>
-                        This passion of mine has revolved ever since the dawn of S.Y. 2020 - 2021. Studying in the Ateneo De Manila Grade School in my 4th year as well as being in the 4th grade level, was the time when I was just a regular student. This was the time when the Ateneo Grade School Class Officers Movement (commonly known as AGSCOM), decided to conduct a dry-run in which class officers were to be elected in each class as early as Grade 4 (as of S.Y. 2019 - 2020), formerly this system was only for Grades 5 and 6 before that mentioned school year. Anyway, when the news came to my section, I was intrigued by this system, although I showed no interest for running for a certain position. To my surprise, instead of going for the traditional elections my class moderator decided to mitigate from this and just handpick who she thinks would best fit each 1 out of 4 positions — plus an assistant for each of these positions. Because of this, I was handpicked to be the assistant-secretary of the class, since my teacher saw that I had leadership potential in me. Fast forward to high school, after being immersed into the class officers’ program for around 2 years, I decided to run for Vice President, and to my surprise I won. I specifically fast-forwarded to this point because this was the time when things started to take a turn. I saw that my class moderator was struggling to discipline us especially for things that were done in subjects, other than English. At that point, I remembered that true service required sacrificing oneself for the benefit of others. Due to this, I have made the decision to start reporting my classmates to her directly when things went wrong in my other classes and breaks, so that it wouldn’t be a burden for my class moderator to have to receive reports from my teachers and the different prefects that roam around during recess and lunch. Although this led to some of my classmates to hate me, talk smack behind my back, and start lying when I caught them doing something they shouldn’t. But there were some of my other classmates who understood this and tried their best to not do what they did before but in the future. And the rest was history.<br><br>
-                        From that experience, I have come to the conclusion that being a class officer is like being a Youtuber. This might be a weird analogy but hear me out, these two comparisons are similar when it comes to devoting your life to something you would want to pursue in life, whether it is for the benefit of yourself, or the people around you. I had to devote my life to being a class officer by making hard decisions in life. And as for a Youtuber, making content like gaming, they make certain types of content based on their interests and their audiences around them to get monetized. Aside from this, sacrifices were to be made like what I said in my personal narrative. To avoid my classmates from getting a Formative Intervention, I had to report my classmates despite possibly losing my bond with them. A youtuber on the other hand would have to sacrifice their education if they would want to become a full-time Youtuber in the future.<br><br>
-                        In conclusion, I learned that passions can be good at first, but you must be ready to handle conflicts, and make hard decisions. These are things that are required to be exhibited if you wish to pursue a career passion in life. Also, we must learn to understand and respect those who worry about your well-being. And that will do it. Thank you for listening to my reflection and I hope you learned something from me today.
-                    </p>
+                    <p>Good day to all of you. I’ve once thought to myself that being passionate about something could lead to you trying to pursue it, attempting to make it into a reality. We all have experienced this at least once in our lives. For sure, you have had instances wherein you regret the decision of pursuing a dream in life. There could have also been instances where you lost your connection/bond between those who are close to you. I have a passion in life that I tried to pursue.</p>
+                    <p>This passion of mine has revolved ever since the dawn of S.Y. 2020 - 2021. Studying in the Ateneo De Manila Grade School in my 4th year as well as being in the 4th grade level, was the time when I was just a regular student. This was the time when the Ateneo Grade School Class Officers Movement (commonly known as AGSCOM), decided to conduct a dry-run in which class officers were to be elected in each class as early as Grade 4 (as of S.Y. 2019 - 2020), formerly this system was only for Grades 5 and 6 before that mentioned school year. Anyway, when the news came to my section, I was intrigued by this system, although I showed no interest for running for a certain position. To my surprise, instead of going for the traditional elections my class moderator decided to mitigate from this and just handpick who she thinks would best fit each 1 out of 4 positions — plus an assistant for each of these positions. Because of this, I was handpicked to be the assistant-secretary of the class, since my teacher saw that I had leadership potential in me. Fast forward to high school, after being immersed into the class officers’ program for around 2 years, I decided to run for Vice President, and to my surprise I won. I specifically fast-forwarded to this point because this was the time when things started to take a turn. I saw that my class moderator was struggling to discipline us especially for things that were done in subjects, other than English. At that point, I remembered that true service required sacrificing oneself for the benefit of others. Due to this, I have made the decision to start reporting my classmates to her directly when things went wrong in my other classes and breaks, so that it wouldn’t be a burden for my class moderator to have to receive reports from my teachers and the different prefects that roam around during recess and lunch. Although this led to some of my classmates to hate me, talk smack behind my back, and start lying when I caught them doing something they shouldn’t. But there were some of my other classmates who understood this and tried their best to not do what they did before but in the future. And the rest was history.</p>
+                    <p>From that experience, I have come to the conclusion that being a class officer is like being a Youtuber. This might be a weird analogy but hear me out, these two comparisons are similar when it comes to devoting your life to something you would want to pursue in life, whether it is for the benefit of yourself, or the people around you. I had to devote my life to being a class officer by making hard decisions in life. And as for a Youtuber, making content like gaming, they make certain types of content based on their interests and their audiences around them to get monetized. Aside from this, sacrifices were to be made like what I said in my personal narrative. To avoid my classmates from getting a Formative Intervention, I had to report my classmates despite possibly losing my bond with them. A youtuber on the other hand would have to sacrifice their education if they would want to become a full-time Youtuber in the future.</p>
+                    <p>In conclusion, I learned that passions can be good at first, but you must be ready to handle conflicts, and make hard decisions. These are things that are required to be exhibited if you wish to pursue a career passion in life. Also, we must learn to understand and respect those who worry about your well-being. And that will do it. Thank you for listening to my reflection and I hope you learned something from me today.</p>
                 </article>
             </div>
         </section>
@@ -165,6 +164,7 @@
             navList.classList.toggle('active');
         });
 
+        // intro text
         let i = 0;
         let txt = 'English';
         let speed = 300;
