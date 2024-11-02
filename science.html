@@ -7,190 +7,188 @@
     <link rel="stylesheet" href="styles.css">
     <title>My 1st Grading Period: Knowledge in Action</title>
     <style>
-       .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 55px;
-    color: white;
-    background-color: #171718;
-    margin-top: 0;
-}
-
-.introduction {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.introduction .title {
-    font-size: 2.5rem;
-    margin: 20px 0;
-}
-
-.introduction h3,
-.background-study h3,
-.problem-objectives .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.problem-objectives .section-title {
-    text-align: center; /* Center the title */
-}
-
-.introduction p,
-.study-text p {
-    text-align: justify; /* Justify the paragraphs */
-    font-size: 1.2rem;
-    margin-bottom: 20px; /* Space between paragraphs */
-    text-indent: 1.5em; /* Standard indent size */
-}
-
-.background-study,
-.problem-objectives {
-    width: 100%;
-    max-width: 1400px;
-}
-
-.study-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.study-text {
-    flex: 1;
-    max-width: 1000px;
-    text-align: justify;
-    margin-right: 50px;
-}
-
-.study-image {
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    max-width: 250px; /* Default max width for larger screens */
-}
-
-/* New two-column content styles */
-.two-column-content {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out columns */
-    margin-top: 40px; /* Space between sections */
-}
-
-.column {
-    flex: 1; /* Each column takes equal width */
-    margin-right: 80px; /* Space between the columns */
-}
-
-.column:last-child {
-    margin-right: 0; /* Remove margin for the last column */
-}
-
-.column h3 {
-    font-size: 2rem; /* Same size as other section headings */
-    margin-bottom: 20px;
-}
-
-.column p {
-    font-size: 1.2rem; /* Same font size as other paragraphs */
-    text-align: justify; /* Justify the text */
-    margin-bottom: 20px;
-    text-indent: 1.5em; /* Standard indent size */
-}
-
-.objectives-list {
-    list-style-type: decimal; /* Use decimal numbers */
-    padding-left: 0; /* Remove padding to avoid indentation */
-    margin: 0; /* Remove default margin */
-    font-size: 1.2rem; /* Same font size as other paragraphs */
-    text-align: justify; /* Align text to the left */
-}
-
-.hypothesis, .bibliography {
-    width: 100%;
-    max-width: 1400px;
-    text-align: center; /* Center the title */
-    margin-top: 40px; /* Space above the sections */
-}
-
-.hypothesis h3, .bibliography h3 {
-    font-size: 2rem; /* Same size as other section headings */
-    margin-bottom: 20px;
-}
-
-.hypothesis p, .bibliography-list {
-    font-size: 1.2rem; /* Same font size as other paragraphs */
-    margin-bottom: 20px;
-    text-align: justify; /* Justify the text for the paragraph */
-}
-
-.bibliography-list {
-    list-style-type: disc; /* Use decimal numbering */
-    padding-left: 20px; /* Adjust left padding for alignment */
-    margin: 0; /* Remove default margin */
-    font-size: 1.2rem; /* Same font size as other paragraphs */
-    text-align: left; /* Align text to the left */
-}
-
-.bibliography-list li {
-    margin-bottom: 10px; /* Space between list items */
-    text-indent: 0; /* No indentation for list items */
-}
-
-.bibliography-list a {
-    color: #00ccff; /* Change this to your desired color for links */
-    text-decoration: none; /* Remove underline if you want */
-}
-
-.bibliography-list a:hover {
-    text-decoration: underline; /* Underline on hover for better visibility */
-}
-
-.bibliography-list a:visited {
-    color: #00ccff; /* Keep the same color for visited links */
-}
-
-
-
-/* Media query for medium screens */
-@media (max-width: 1024px) {
-    .study-image {
-        max-width: 200px; /* Smaller max width for medium screens */
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 55px;
+        color: white;
+        background-color: #171718;
+        margin-top: 0;
     }
-}
 
-/* Media query for small screens */
-@media (max-width: 768px) {
-    .study-image {
-        max-width: 150px; /* Even smaller max width for small screens */
+    .introduction {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .introduction .title {
+        font-size: 2.5rem;
+        margin: 20px 0;
+    }
+
+    .introduction h3,
+    .background-study h3,
+    .problem-objectives .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .problem-objectives .section-title {
+        text-align: center; /* Center the title */
+    }
+
+    .introduction p,
+    .study-text p {
+        text-align: justify; /* Justify the paragraphs */
+        font-size: 1.2rem;
+        margin-bottom: 20px; /* Space between paragraphs */
+        text-indent: 1.5em; /* Standard indent size */
+    }
+
+    .background-study,
+    .problem-objectives,
+    .hypothesis,
+    .bibliography {
+        width: 100%;
+        max-width: 1400px;
+        overflow-wrap: break-word; /* Prevent overflow */
     }
 
     .study-item {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
     }
 
     .study-text {
-        margin-right: 0;
-        margin-bottom: 10px;
+        flex: 1;
+        max-width: 1000px;
+        text-align: justify;
+        margin-right: 50px;
     }
 
     .study-image {
-        max-width: 100%; /* Full width for very small screens */
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        max-width: 250px; /* Default max width for larger screens */
     }
 
+    /* New two-column content styles */
     .two-column-content {
-        flex-direction: column; /* Stack columns on smaller screens */
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space out columns */
+        margin-top: 40px; /* Space between sections */
     }
 
     .column {
-        margin-right: 0; /* Remove margin for stacked columns */
-        margin-bottom: 20px; /* Space between stacked columns */
+        flex: 1; /* Each column takes equal width */
+        margin-right: 80px; /* Space between the columns */
     }
-}
+
+    .column:last-child {
+        margin-right: 0; /* Remove margin for the last column */
+    }
+
+    .column h3 {
+        font-size: 2rem; /* Same size as other section headings */
+        margin-bottom: 20px;
+    }
+
+    .column p {
+        font-size: 1.2rem; /* Same font size as other paragraphs */
+        text-align: justify; /* Justify the text */
+        margin-bottom: 20px;
+        text-indent: 1.5em; /* Standard indent size */
+    }
+
+    .objectives-list {
+        list-style-type: decimal; /* Use decimal numbers */
+        padding-left: 0; /* Remove padding to avoid indentation */
+        margin: 0; /* Remove default margin */
+        font-size: 1.2rem; /* Same font size as other paragraphs */
+        text-align: justify; /* Align text to the left */
+    }
+
+    .hypothesis h3,
+    .bibliography h3 {
+        font-size: 2rem; /* Same size as other section headings */
+        margin-bottom: 20px;
+        text-align: center; /* Center the title */
+    }
+
+    .hypothesis p,
+    .bibliography-list {
+        font-size: 1.2rem; /* Same font size as other paragraphs */
+        margin-bottom: 20px;
+        text-align: justify; /* Justify the text for the paragraph */
+    }
+
+    .bibliography-list {
+        list-style-type: disc; /* Use bullet points */
+        padding-left: 20px; /* Adjust left padding for alignment */
+        margin: 0; /* Remove default margin */
+        font-size: 1.2rem; /* Same font size as other paragraphs */
+        text-align: left; /* Align text to the left */
+    }
+
+    .bibliography-list li {
+        margin-bottom: 10px; /* Space between list items */
+        text-indent: 0; /* No indentation for list items */
+    }
+
+    .bibliography-list a {
+        color: #00ccff; /* Change this to your desired color for links */
+        text-decoration: none; /* Remove underline if you want */
+    }
+
+    .bibliography-list a:hover {
+        text-decoration: underline; /* Underline on hover for better visibility */
+    }
+
+    .bibliography-list a:visited {
+        color: #00ccff; /* Keep the same color for visited links */
+    }
+
+    /* Media query for medium screens */
+    @media (max-width: 1024px) {
+        .study-image {
+            max-width: 200px; /* Smaller max width for medium screens */
+        }
+    }
+
+    /* Media query for small screens */
+    @media (max-width: 768px) {
+        .study-image {
+            max-width: 150px; /* Even smaller max width for small screens */
+        }
+
+        .study-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .study-text {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .study-image {
+            max-width: 100%; /* Full width for very small screens */
+        }
+
+        .two-column-content {
+            flex-direction: column; /* Stack columns on smaller screens */
+        }
+
+        .column {
+            margin-right: 0; /* Remove margin for stacked columns */
+            margin-bottom: 20px; /* Space between stacked columns */
+        }
+    }
+
 </style>
 </head>
 <body>
