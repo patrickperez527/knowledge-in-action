@@ -11,9 +11,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 20px 55px;
     color: white;
     background-color: #171718;
+    margin-top: 0;
 }
 
 .introduction {
@@ -27,25 +28,26 @@
 }
 
 .introduction h3,
-.background-study h3 {
+.background-study h3,
+.problem-objectives .section-title {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.introduction p {
-    text-align: justify; /* Justify the paragraphs */
-    font-size: 1.2rem;
-    text-indent: 1.5em; /* Standard indent size */
+.problem-objectives .section-title {
+    text-align: center; /* Center the title */
 }
 
 .introduction p,
 .study-text p {
+    text-align: justify; /* Justify the paragraphs */
     font-size: 1.2rem;
     margin-bottom: 20px; /* Space between paragraphs */
     text-indent: 1.5em; /* Standard indent size */
 }
 
-.background-study {
+.background-study,
+.problem-objectives {
     width: 100%;
     max-width: 1400px;
 }
@@ -70,6 +72,75 @@
     margin: 20px auto;
     max-width: 250px; /* Default max width for larger screens */
 }
+
+/* New two-column content styles */
+.two-column-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out columns */
+    margin-top: 40px; /* Space between sections */
+}
+
+.column {
+    flex: 1; /* Each column takes equal width */
+    margin-right: 80px; /* Space between the columns */
+}
+
+.column:last-child {
+    margin-right: 0; /* Remove margin for the last column */
+}
+
+.column h3 {
+    font-size: 2rem; /* Same size as other section headings */
+    margin-bottom: 20px;
+}
+
+.column p {
+    font-size: 1.2rem; /* Same font size as other paragraphs */
+    text-align: justify; /* Justify the text */
+    margin-bottom: 20px;
+    text-indent: 1.5em; /* Standard indent size */
+}
+
+.objectives-list {
+    list-style-type: decimal; /* Use decimal numbers */
+    padding-left: 0; /* Remove padding to avoid indentation */
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Same font size as other paragraphs */
+    text-align: justify; /* Align text to the left */
+}
+
+.hypothesis, .bibliography {
+    width: 100%;
+    max-width: 1400px;
+    text-align: center; /* Center the title */
+    margin-top: 40px; /* Space above the sections */
+}
+
+.hypothesis h3, .bibliography h3 {
+    font-size: 2rem; /* Same size as other section headings */
+    margin-bottom: 20px;
+}
+
+.hypothesis p, .bibliography-list {
+    font-size: 1.2rem; /* Same font size as other paragraphs */
+    margin-bottom: 20px;
+    text-align: justify; /* Justify the text for the paragraph */
+}
+
+.bibliography-list {
+    list-style-type: disc; /* Use decimal numbering */
+    padding-left: 20px; /* Adjust left padding for alignment */
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Same font size as other paragraphs */
+    text-align: left; /* Align text to the left */
+}
+
+.bibliography-list li {
+    margin-bottom: 10px; /* Space between list items */
+    text-indent: 0; /* No indentation for list items */
+}
+
+
 
 /* Media query for medium screens */
 @media (max-width: 1024px) {
@@ -97,10 +168,17 @@
     .study-image {
         max-width: 100%; /* Full width for very small screens */
     }
+
+    .two-column-content {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+
+    .column {
+        margin-right: 0; /* Remove margin for stacked columns */
+        margin-bottom: 20px; /* Space between stacked columns */
+    }
 }
-
-
-    </style>
+</style>
 </head>
 <body>
     <header>
@@ -172,6 +250,64 @@
                     </div>
                     <img src="Image/Science4-removebg.png" alt="Background Study Image 3" class="study-image">
                 </div>
+
+                 <!-- significance / scope and limitations of the study -->
+                <div class="two-column-content">
+                    <div class="column">
+                        <h3>Significance of the Study</h3>
+                        <p>This study is significant for several reasons. Firstly, it addresses the pressing issue of plastic pollution, which has severe environmental and economic consequences. By exploring the potential of superworms in consuming plastics, this research contributes to the development of sustainable solutions for plastic waste management. Secondly, the study’s focus on a comparative analysis of polystyrene and polyethylene consumption by Zophobas morio provides valuable insights into the worms’ capabilities and limitations. This information can inform the development of more effective plastic degradation strategies. Finally, the study’s emphasis on the long-term ecological impact and feasibility of using superworms on an industrial scale highlights the need for further research in this area.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Scope and Limitations of the Study</h3>
+                        <p>This scope of the study is to compare the mass reduction of two types of plastics, polystyrene and polyethylene, when exposed to superworms (Zophobas morio) over a period of 60 days. The experiment will focus on these two plastics, with mass reduction as the primary indicator of degradation, aiming to assess whether superworms are more effective at reducing the mass of one plastic type over the other. However, the study is limited by its 60-day duration, which may not fully capture long-term degradation effects. Additionally, one mass reduction will be measured, without examining the chemical breakdown or byproducts, limiting insights into complete degradation. Experimental conditions may not replicate natural settings, potentially affecting the superworms’ consumption rates. Lastly, findings will be specific to polystyrene and polyethylene, limiting generalizability to other plastic types.</p>
+                    </div>
+                </div>
+
+                <!-- problem statement and objectives -->
+                <div class="problem-objectives" style="margin-top: 40px;">
+                    <h3 class="section-title">Problem Statement and Objectives</h3>
+                    <div class="two-column-content">
+                        <div class="column">
+                            <h3>Problem Statement</h3>
+                            <p>The purpose of this study is to determine the effect of superworms (Zophobas morio) on the mass reduction of polystyrene and polyethylene over a 60-day period.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Objectives</h3>
+                            <p style="text-indent: 0%;">This study aims to:</p>
+                            <ol class="objectives-list">
+                                <li>To investigate the impact of Zophobas morio on the consumption of polyethylene and polystyrene.</li>
+                                <li>To compare the effectiveness of superworms in consuming polystyrene versus polyethylene by analyzing the difference in mass reduction after 60 days.</li>
+                                <li>To assess the potential for superworms to be used in practical applications for plastic waste management.</li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Hypothesis -->
+                <div class="hypothesis" style="margin-top: 40px;">
+                    <h3 class="section-title">Hypothesis</h3>
+                    <p>If superworms (Zophobas morio) are exposed to polystyrene and polyethylene for 60 days, then the mass of both plastics will be reduced, with polystyrene experiencing a greater reduction in mass than polyethylene.</p>
+                </div>
+
+                <!-- Bibliography -->
+                <div class="bibliography" style="margin-top: 40px;">
+                    <h3 class="section-title">Bibliography</h3>
+                    <ul class="bibliography-list">
+                        <li>Abdul Ghani, et al. (2022). Superworms can help reduce plastic pollution by being capable of eating through plastic waste. <a href="https://www.researchgate.net/publication/366853586_Superworms_can_Help_Reduce_Plastic_Pollution_by_Being_Capable_of_Eating_Through_Plastic_Waste" target="_blank" rel="noopener noreferrer">ResearchGate: https://www.researchgate.net/publication/366853586_Superworms_can_Help_Reduce_Plastic_Pollution_by_Being_Capable_of_Eating_Through_Plastic_Waste</a>.</li>
+                        <li>Davis. (2019). Styrofoam Facts — Why you may want to bring your own cup. <a href="https://www.sej.org/publications/backgrounders/styrofoam-facts-why-you-may-want-bring-your-own-cup#:~:text=Once%20in%20the%20landfill%2C%20it,does%20not%20go%20into%20landfills" target="_blank" rel="noopener noreferrer">SEJ: https://www.sej.org/publications/backgrounders/styrofoam-facts-why-you-may-want-bring-your-own-cup</a>.</li>
+                        <li>Garthwaite, J. (2015). Worms dine on styrofoam, with benefits for the environment. <a href="https://news.stanford.edu/stories/2015/09/worms-digest-plastics-092915" target="_blank" rel="noopener noreferrer">Stanford News: https://news.stanford.edu/stories/2015/09/worms-digest-plastics-092915</a>.</li>
+                        <li>Helmenstine, A. M., PhD. (2019). Dissolve styrofoam in acetone. <a href="https://www.thoughtco.com/dissolving-styrofoam-in-acetone-608924" target="_blank" rel="noopener noreferrer">ThoughtCo: https://www.thoughtco.com/dissolving-styrofoam-in-acetone-608924</a>.</li>
+                        <li>Osborne, M. (2022). Polystyrene-Eating ‘Superworms’ May Provide Clues for Better Recycling. <a href="https://www.smithsonianmag.com/smart-news/polystyrene-eating-superworms-may-provide-clues-for-better-recycling-180980239/" target="_blank" rel="noopener noreferrer">Smithsonian Magazine: https://www.smithsonianmag.com/smart-news/polystyrene-eating-superworms-may-provide-clues-for-better-recycling-180980239/</a>.</li>
+                        <li>Spangler S. (2024) Melting Packaging Peanuts - Polystyrene Science <a href="https://stevespangler.com/experiments/melting-packaging-peanuts/" target="_blank" rel="noopener noreferrer">Steve Spangler: https://stevespangler.com/experiments/melting-packaging-peanuts/</a>.</li>
+                        <li>Peng, B. (2020). Biodegradation of polystyrene wastes in yellow mealworms (Larvae of Tenebrio molitor) with the assistance of microorganisms: A sustainable approach for waste management. Environmental Pollution, 262, 114297. <a href="https://doi.org/10.1016/j.envpol.2020.114297" target="_blank" rel="noopener noreferrer">DOI: https://doi.org/10.1016/j.envpol.2020.114297</a>.</li>
+                        <li>Rumbos, C. I., & Athanassiou, C. G. (2021). The Superworm, Zophobas morio (Coleoptera:Tenebrionidae): A ‘Sleeping Giant’ in Nutrient Sources. Journal of Insect Science, 21(2). <a href="https://doi.org/10.1093/jisesa/ieab014" target="_blank" rel="noopener noreferrer">DOI: https://doi.org/10.1093/jisesa/ieab014</a>.</li>
+                        <li>Thomson, H. (2022, June 21). Superworms eat and survive on polystyrene. <a href="https://www.scientificamerican.com/article/superworms-eat-and-survive-on-polystyrene/" target="_blank" rel="noopener noreferrer">Scientific American: https://www.scientificamerican.com/article/superworms-eat-and-survive-on-polystyrene/</a>.</li>
+                        <li>Yang, Y., Wang, J., & Xia, M. (2019). Biodegradation and mineralization of polystyrene by plastic-eating superworms Zophobas atratus. The Science of the Total Environment, 708, 135233. <a href="https://doi.org/10.1016/j.scitotenv.2019.135233" target="_blank" rel="noopener noreferrer">DOI: https://doi.org/10.1016/j.scitotenv.2019.135233</a>.</li>
+                        <li>Zaman, I., et al. (2022). Different types of plastic bioremediation using soil bacteria and Superworm Zophobas Morio larvae. Brac University. <a href="http://dspace.bracu.ac.bd/xmlui/handle/10361/18721" target="_blank" rel="noopener noreferrer">Brac University: http://dspace.bracu.ac.bd/xmlui/handle/10361/18721</a>.</li>
+                    </ul>
+                </div>
+                                
             </div>
         </section>
         
